@@ -1,18 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: Creatorlxd的个人博客
+keywords: Creatorlxd
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
-
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+Creatorlxd,
+A Game Engine Developer,
+A Communist.
 
 ## 联系
 
