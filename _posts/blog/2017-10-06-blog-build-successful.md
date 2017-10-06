@@ -1,13 +1,8 @@
 ---
-author: creatorlxd
-comments: true
-date: 2017-10-07 18:58:32
 layout: post
 title: 终于把博客搭建好了
-categories:
-- Other
-tags:
-- unknown
+categories: Other
+tags: unknown
 ---
 
 # 我的博客终于搭好了
