@@ -91,13 +91,13 @@ comments_provider: gitalk
 disqus:
     username: creatorlxd
 #https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: creatorlxd
-    admin: creatorlxd
-    repo: for_blog_comment
-    oauth:
-        client_id: cc935208aa587f567e29
-        client_secret: 79630503ffe5418b78d907f0f622f659a89132da
+#gitment:
+#    owner: creatorlxd
+#    admin: creatorlxd
+#    repo: for_blog_comment
+#    oauth:
+#        client_id: cc935208aa587f567e29
+#        client_secret: 79630503ffe5418b78d907f0f622f659a89132da
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: creatorlxd
