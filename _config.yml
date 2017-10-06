@@ -93,6 +93,7 @@ disqus:
 #https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: creatorlxd
+    admin: creatorlxd
     repo: for_blog_comment
     oauth:
         client_id: cc935208aa587f567e29
