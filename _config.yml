@@ -95,14 +95,14 @@ gitment:
     owner: creatorlxd
     repo: for-blog-comment
     oauth:
-        client_id: f851f17b004e293be801
-        client_secret: f93a2e5b3df7e3cb5fb631fff5cebdd7f95ec2b2
+        client_id: 6d1ea1661fdfb3df8e32
+        client_secret: d5a16d87ab98b33a37ce02d82ad8ba069c886af8
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: creatorlxd
     repo: for-blog-comment
-    clientID: f851f17b004e293be801
-    clientSecret: f93a2e5b3df7e3cb5fb631fff5cebdd7f95ec2b2
+    clientID: 6d1ea1661fdfb3df8e32
+    clientSecret: d5a16d87ab98b33a37ce02d82ad8ba069c886af8
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : true
 
