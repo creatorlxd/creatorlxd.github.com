@@ -93,14 +93,14 @@ disqus:
 #https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: creatorlxd
-    repo: for-blog-comment
+    repo: blogcomment
     oauth:
         client_id: 6d1ea1661fdfb3df8e32
         client_secret: d5a16d87ab98b33a37ce02d82ad8ba069c886af8
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: creatorlxd
-    repo: for-blog-comment
+    repo: blogcomment
     clientID: 6d1ea1661fdfb3df8e32
     clientSecret: d5a16d87ab98b33a37ce02d82ad8ba069c886af8
 # 在使用其它评论组件时可点击显示 Disqus
