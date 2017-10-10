@@ -1,7 +1,7 @@
 ---
 layout: post
 title: priority_queue 优先队列
-categories: STL,c++
+categories: [STL, c++]
 description: 有关priotity_queue 的介绍
 keywords: STL,c++,priority_queue
 ---
