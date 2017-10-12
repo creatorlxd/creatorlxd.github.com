@@ -24,7 +24,7 @@ template<
 
 &emsp;&emsp;第二个模板参数是指你所要使用的容器。  
 我们知道：`queue`、`stack`都不是类似于`vector`的实际的容器，而是使用其他容器进行操作的模板。  
-&emsp;&emsp;这里的容器可以用`vector`，也可以用`forward_list`（没试过）。
+&emsp;&emsp;这里的容器可以用`vector`，也可以用其他的容器。
 &emsp;&emsp;第三个参数尤为重要，直接关系到元素出栈的顺序。  
 &emsp;&emsp;**选择 `less<T>`则最大元素出队列  
 &emsp;&emsp;选择`great<T>`则最小元素出队列**
