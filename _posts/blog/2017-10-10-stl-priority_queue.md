@@ -29,7 +29,7 @@ template<
 &emsp;&emsp;**选择 `less<T>`则最大元素出队列  
 &emsp;&emsp;选择`great<T>`则最小元素出队列**
 
-&emsp;&emsp;剩下的跟一般的`queue`操作差别不大，一样的`push`、`front`、`pop`......
+&emsp;&emsp;剩下的跟一般的`queue`操作差别不大，一样的`push`、`top`、`pop`......
 
 &emsp;&emsp;然而值得注意的是可以自定义过一个**仿函数**用于比较操作。
 
