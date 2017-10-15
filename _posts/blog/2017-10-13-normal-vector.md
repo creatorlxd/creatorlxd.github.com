@@ -59,3 +59,28 @@ keywords: Light,Material,Graphics,Normal Vector
 		delete[] flag;
 	}
 ```
+
+## 法向量的转化
+
+&emsp;&emsp;法向量的转化是指将某个平面改变后，如何用改变前的法向量计算出改变后的法向量。上图：  
+![图片2](/images/normal-vector2.png)  
+> 图片来自于*"Introduction to 3D game programming with Direct X 11"*
+
+这里做个推导吧：  
+
+&emsp;&emsp;设**u**为平面的上任意两向量的差（也是向量）  
+&emsp;&emsp;设**n**是平面那个改变前的法向量。  
+&emsp;&emsp;这可知**u**·**v**=0 => 两个向量垂直  
+&emsp;&emsp;将其转化为矩阵形式：  
+&emsp;&emsp;&emsp;&emsp;**u**\***T(n)**=0 **T(n)**表示n的转置  
+&emsp;&emsp;设**A**为改变平面的矩阵  
+&emsp;&emsp;所以可得：**u**\* **A**\***I(A)**\***T(n)**=0 **I(A)**表示A的**逆矩阵**  
+&emsp;&emsp;因为**T(T(A))=A**又**T(A\*B)=T(A)\*T(B)**  
+&emsp;&emsp;所以**I(A)\*T(n)=n\*T(I(A))**  
+&emsp;&emsp;所以可列出：  
+&emsp;&emsp;&emsp;&emsp;**u\*A·n\*T(I(A))**=0  
+&emsp;&emsp;设**B**=**T(I(A))**
+
+则**n\*B**即为变换后的平面的法向量了。
+
+&emsp;&emsp;在实际的应用中我们往往会在**Vertex Shader**中使用这一矩阵(**B**)来计算经过世界变换后的物体的顶点上的顶点法线，这时的矩阵**A**即是我们物体的**世界变换**矩阵。
