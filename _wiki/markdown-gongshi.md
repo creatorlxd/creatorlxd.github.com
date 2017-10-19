@@ -5,7 +5,7 @@ categories: [Markdown]
 description: Markdown中的公式
 keywords: Markdown,公式
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 # 在Markdown中使用公式
 
 &emsp;&emsp;这个据说可以使用**GoogleChalk**，只需要在md文件中加入  
@@ -19,3 +19,5 @@ keywords: Markdown,公式
 
 结果：  
 <img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;">
+
+## MMP Blog 竟然用不了！！！！！
