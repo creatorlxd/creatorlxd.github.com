@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 网络流模板
-categories: [OI,网络流]
+categories: [OI,图论,网络流]
 tags: 模板
 ---
 
