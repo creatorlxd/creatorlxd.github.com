@@ -33,7 +33,7 @@ errno_t wcstombs_s(
 &emsp;&emsp;所以，就可以用这两个库函数来做转换了。  
 代码如下（出自我的**Space**游戏引擎）：
 ```c++
-std::wstring SpaceGameEngine::StringToWString(const std::string str)
+std::wstring SpaceGameEngine::StringToWString(const std::string& str)
 {
 	std::wstring wstr;
 	size_t size;
