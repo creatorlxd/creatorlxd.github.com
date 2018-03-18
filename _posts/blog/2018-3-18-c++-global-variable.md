@@ -1,6 +1,6 @@
 ---
 layout: post
-title: c++全局变量
+title: C++全局变量
 categories: [c++]
 tags: c++
 ---
