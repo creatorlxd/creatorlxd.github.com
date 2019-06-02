@@ -10,8 +10,88 @@ tags: c++
 ## `inline`
 &emsp;&emsp;`inline`是C++中比较基础的一个修饰符，它的功能就是内联。但是我不准备介绍`inline`发挥内联功能的使用方法，而是准备介绍一下它作为一种能使函数和对象在头文件定义的修饰符的用法。
 
-&emsp;&emsp;众所周知，将函数或是全局变量的定义直接写在头文件中，是会报出`fatal error LNK1169: 找到一个或多个多重定义的符号`这样的错误的。然而，这个错误并不是由编译器报出的，而是由链接器报出的。因为我们在一个头文件中定义了某个函数或是变量后，一旦这个头文件被多个源文件包含，那么每个包含了这个头文件的源文件在被编译后所产生的`.obj`文件中都会有你在头文件中定义的函数或是变量的二进制符号。当链接器在链接时，就会发现有多个重复定义的符号，于是就会报错。而`C++`的`inline`关键字就可以解决这个问题。在链接时，如果某个符号是使用`inline`修饰的，那么链接器会在多个编译单元(包含该符号定义的`.obj`文件中的该符号的定义部分)中任选一个与当前被调用处链接。**被`inline`修饰的函数编译产生的的多个符号定义中的`static`对象全都指向同一个对象**。
+&emsp;&emsp;众所周知，将函数或是全局变量的定义直接写在头文件中，是会报出`fatal error LNK1169: 找到一个或多个多重定义的符号`这样的错误的。然而，这个错误并不是由编译器报出的，而是由链接器报出的。因为我们在一个头文件中定义了某个函数或是变量后，一旦这个头文件被多个源文件包含，那么每个包含了这个头文件的源文件在被编译后所产生的`.obj`文件中都会有你在头文件中定义的函数或是变量的二进制符号。当链接器在链接时，就会发现有多个重复定义的符号，于是就会报错。而`C++`的`inline`关键字就可以解决这个问题。
 
+&emsp;&emsp;目前，C++的标准是这样定义的:
+* 对于不是外部连接的`inline`变量和函数，其可在不同的翻译单元中拥有不重复且等同的定义，而当某个翻译单元的代码访问某个`inline`变量或函数时，其所访问到(也只能访问到)的是其所在翻译单元的实现。
+* 对于是外部连接的`inline`变量和函数(非`static`的)，其在每个翻译单元中均拥有相同地址。
+* 在内联函数中，
+    1. 所有函数定义中的函数局部静态对象在所有翻译单元间共享(它们都指代相同的定义于某一个翻译单元中的对象)。
+    2. 所有函数定义中所定义的类型亦在所有翻译单元中相同。
+* 命名空间作用域的内联`const`变量默认具有外部连接，这点不同于非`inline`非`volatile`的有`const`限定的变量。
+
+&emsp;&emsp; 测试代码如下:
+```c++
+//test2.h
+#include <iostream>
+
+#define PRINT_ADDR_VALUE(x)\
+	std::cout<<&x<<'\t'<<x<<std::endl;
+
+inline int test()
+{
+	static int cot=0;
+	return cot++;
+}
+
+inline int i1=0;
+extern inline int i2=0;
+inline const int ci1=test();
+extern inline const int ci2=test();
+inline static int si1=0;
+
+void print2();
+
+//test2.cpp
+#include "test2.h"
+
+void print2()
+{
+	PRINT_ADDR_VALUE(i1);
+	PRINT_ADDR_VALUE(i2);
+	PRINT_ADDR_VALUE(ci1);
+	PRINT_ADDR_VALUE(ci2);
+	PRINT_ADDR_VALUE(si1);
+}
+
+//test.cpp
+#include <iostream>
+#include "test2.h"
+using namespace std;
+
+void print()
+{
+	PRINT_ADDR_VALUE(i1);
+	PRINT_ADDR_VALUE(i2);
+	PRINT_ADDR_VALUE(ci1);
+	PRINT_ADDR_VALUE(ci2);
+	PRINT_ADDR_VALUE(si1);
+}
+int main()
+{
+	print();
+	std::cout<<"-----------------------"<<std::endl;
+	print2();
+	return 0;
+}
+
+/*
+最后在macos下的输出结果为:
+0x1098f90dc	0
+0x1098f90d8	0
+0x1098f90d4	0
+0x1098f90d0	1
+0x1098f90e8	0
+-----------------------
+0x1098f90dc	0
+0x1098f90d8	0
+0x1098f90d4	0
+0x1098f90d0	1
+0x1098f90ec	0
+
+这里值得注意的是:虽然这里的const变量不在命名空间内，但编译器依旧将其当做了外部连接的变量来处理,当然这也有可能是一种优化的结果。
+*/
+```
 ### `inline`的用法
 
 &emsp;&emsp;在头文件中，你的全局变量、类中的静态对象(注意：不可将声明与定义分离放在头文件中)或是函数（非类中方法）的定义前直接加上`inline`即可。但是对于全局的`const`常量或是类中的方法来说，`inline`可以看做是默认带有的，不用加(msvc)。
