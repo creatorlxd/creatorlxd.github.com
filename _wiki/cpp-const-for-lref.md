@@ -5,7 +5,8 @@ categories: [c++]
 description: const对左值引用类型的影响
 keywords: c++
 ---
-# `const`对左值引用类型的影响
+
+# const对左值引用类型的影响
 `const`同`&&`一样，对左值引用类型不会产生影响。
 例：
 ```c++
