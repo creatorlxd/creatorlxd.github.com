@@ -23,7 +23,7 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:8000/">
     <link rel="alternate" type="application/atom+xml" title="Creatorlxd's Blog" href="/feed.xml">
     <link rel="shortcut icon" href="/favicon.ico">
     
@@ -33,7 +33,7 @@
     
         
     
-    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:url" content="http://localhost:8000/">
     <meta property="og:site_name" content="Creatorlxd's Blog">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
@@ -54,7 +54,7 @@
 <body class="home" data-mz="home">
     <header class="site-header">
         <div class="container">
-            <h1><a href="http://localhost:4000/" title="Creatorlxd's Blog"><span class="octicon octicon-mark-github"></span> Creatorlxd's Blog</a></h1>
+            <h1><a href="http://localhost:8000/" title="Creatorlxd's Blog"><span class="octicon octicon-mark-github"></span> Creatorlxd's Blog</a></h1>
             <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -105,6 +105,110 @@
     <div class="columns">
         <div class="column two-thirds" >
             <ol class="repo-list">
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="/2021/02/01/learn-range-4/">解析c++ range实现（四），iterator</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        Iterator
+  在上次我们初步得看完整个range的concept后，我们不难发现，基本上大部分的range定义都依赖于对其迭代器的定义，所以这次我们就来看一下iterator/concepts.hpp中的各种迭代器的concept定义。
+  但是在直接看concept之前，我们得先看一下iterator/traits.hpp中的各种traits。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2021/02/01
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#c++" title="c++">c++</a>
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#range" title="range">range</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="/2021/01/31/learn-range-3/">解析c++ range实现（三），range</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        Range
+  整个Range-v3的实现文件夹(range/v3)里的东西特别多，要想较好地去理解整个实现，就必须找一个好的切入点。之前，我已阅读完了整个项目所使用的模板元编程的库的部分，那是整个项目所使用的基础工具。现在，我决定从整个库的最核心的概念range开始看，如果中途遇到其他的辅助的功能实现再加以解释，而不是专门地去看那些实现，这样主次分明，能大大地减少我们阅读整个项目所需的时间。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2021/01/31
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#c++" title="c++">c++</a>
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#range" title="range">range</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="/2021/01/30/learn-range-2/">解析c++ range实现（二），meta</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        Meta
+  meta里的东西很多，没法一一地去解释，所以我先选取一些使用得比较多的内容来加以分析。
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2021/01/30
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#c++" title="c++">c++</a>
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#range" title="range">range</a>
+                        </span>
+                        
+                    </p>
+                </li>
+                
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="/2021/01/23/learn-range-1/">解析c++ range实现（一），初步介绍</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        Range 的初步介绍
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> 2021/01/23
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#c++" title="c++">c++</a>
+                        </span>
+                        
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="/categories/#range" title="range">range</a>
+                        </span>
+                        
+                    </p>
+                </li>
                 
                 <li class="repo-list-item">
                     <h3 class="repo-list-name">
@@ -192,111 +296,6 @@
                     </p>
                 </li>
                 
-                <li class="repo-list-item">
-                    <h3 class="repo-list-name">
-                      <a href="/2017/11/05/string-and-wstring/">string 与 wstring 的相互转换</a>
-                    </h3>
-                    <p class="repo-list-description">
-                        string 与 wstring 的相互转换
-                    </p>
-                    <p class="repo-list-meta">
-                        <span class="meta-info">
-                          <span class="octicon octicon-calendar"></span> 2017/11/05
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#Utility" title="Utility">Utility</a>
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#string" title="string">string</a>
-                        </span>
-                        
-                    </p>
-                </li>
-                
-                <li class="repo-list-item">
-                    <h3 class="repo-list-name">
-                      <a href="/2017/11/05/network-flow/">网络流模板</a>
-                    </h3>
-                    <p class="repo-list-description">
-                        网络流模板
-                    </p>
-                    <p class="repo-list-meta">
-                        <span class="meta-info">
-                          <span class="octicon octicon-calendar"></span> 2017/11/05
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#OI" title="OI">OI</a>
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#图论" title="图论">图论</a>
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#网络流" title="网络流">网络流</a>
-                        </span>
-                        
-                    </p>
-                </li>
-                
-                <li class="repo-list-item">
-                    <h3 class="repo-list-name">
-                      <a href="/2017/11/05/kruskal/">Kruskal模板</a>
-                    </h3>
-                    <p class="repo-list-description">
-                        Kruskal模板
-                    </p>
-                    <p class="repo-list-meta">
-                        <span class="meta-info">
-                          <span class="octicon octicon-calendar"></span> 2017/11/05
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#OI" title="OI">OI</a>
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#图论" title="图论">图论</a>
-                        </span>
-                        
-                    </p>
-                </li>
-                
-                <li class="repo-list-item">
-                    <h3 class="repo-list-name">
-                      <a href="/2017/10/23/uva-1220-solution/">UVA 1220 题解</a>
-                    </h3>
-                    <p class="repo-list-description">
-                        UVA 1220 题解
-                    </p>
-                    <p class="repo-list-meta">
-                        <span class="meta-info">
-                          <span class="octicon octicon-calendar"></span> 2017/10/23
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#OI" title="OI">OI</a>
-                        </span>
-                        
-                        <span class="meta-info">
-                          <span class="octicon octicon-file-directory"></span>
-                          <a href="/categories/#树形DP" title="树形DP">树形DP</a>
-                        </span>
-                        
-                    </p>
-                </li>
-                
             </ol>
         </div>
         <div class="column one-third">
@@ -341,15 +340,15 @@ SimpleJekyllSearch({
                 <p class="card-text">A  3D Game Engine by creatorlxd.Use DirectX</p>
             </div>
             <div class="card-text">
-                <span class="meta-info" title="19 stars">
-                    <span class="octicon octicon-star"></span> 19
+                <span class="meta-info" title="20 stars">
+                    <span class="octicon octicon-star"></span> 20
                 </span>
                 <span class="meta-info" title="3 forks">
                     <span class="octicon octicon-git-branch"></span> 3
                 </span>
-                <span class="meta-info" title="Last updated：2020-03-28 05:00:56 UTC">
+                <span class="meta-info" title="Last updated：2022-12-12 16:10:47 UTC">
                     <span class="octicon octicon-clock"></span>
-                    <time datetime="2020-03-28 05:00:56 UTC">2020-03-28</time>
+                    <time datetime="2022-12-12 16:10:47 UTC">2022-12-12</time>
                 </span>
             </div>
         </div>
@@ -376,9 +375,38 @@ SimpleJekyllSearch({
                 <span class="meta-info" title="0 forks">
                     <span class="octicon octicon-git-branch"></span> 0
                 </span>
-                <span class="meta-info" title="Last updated：2020-09-26 14:34:42 UTC">
+                <span class="meta-info" title="Last updated：2023-04-01 02:02:06 UTC">
                     <span class="octicon octicon-clock"></span>
-                    <time datetime="2020-09-26 14:34:42 UTC">2020-09-26</time>
+                    <time datetime="2023-04-01 02:02:06 UTC">2023-04-01</time>
+                </span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="https://github.com/creatorlxd/LearnGAMES101" target="_blank" class="card text-center">
+    <div class="thumbnail">
+        <div class="card-image geopattern" data-pattern-id="LearnGAMES101">
+            <div class="card-image-cell">
+                <h3 class="card-title">
+                    LearnGAMES101
+                </h3>
+            </div>
+        </div>
+        <div class="caption">
+            <div class="card-description">
+                <p class="card-text"></p>
+            </div>
+            <div class="card-text">
+                <span class="meta-info" title="1 stars">
+                    <span class="octicon octicon-star"></span> 1
+                </span>
+                <span class="meta-info" title="0 forks">
+                    <span class="octicon octicon-git-branch"></span> 0
+                </span>
+                <span class="meta-info" title="Last updated：2022-01-22 15:07:43 UTC">
+                    <span class="octicon octicon-clock"></span>
+                    <time datetime="2022-01-22 15:07:43 UTC">2022-01-22</time>
                 </span>
             </div>
         </div>
@@ -443,35 +471,6 @@ SimpleJekyllSearch({
     </div>
 </a>
 
-<a href="https://github.com/creatorlxd/LxdDemo" target="_blank" class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="LxdDemo">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    LxdDemo
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text"></p>
-            </div>
-            <div class="card-text">
-                <span class="meta-info" title="0 stars">
-                    <span class="octicon octicon-star"></span> 0
-                </span>
-                <span class="meta-info" title="0 forks">
-                    <span class="octicon octicon-git-branch"></span> 0
-                </span>
-                <span class="meta-info" title="Last updated：2019-09-21 17:40:19 UTC">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="2019-09-21 17:40:19 UTC">2019-09-21</time>
-                </span>
-            </div>
-        </div>
-    </div>
-</a>
-
 
 
         </div>
@@ -487,6 +486,10 @@ SimpleJekyllSearch({
         
           
               <a href="/page2"  class="btn btn-outline">2</a>
+          
+        
+          
+              <a href="/page3"  class="btn btn-outline">3</a>
           
         
         
